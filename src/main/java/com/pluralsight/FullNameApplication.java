@@ -8,16 +8,16 @@ public class FullNameApplication {
 
         //gather user info
         System.out.print("Enter your name: ");
-        String firstName = scanner.nextLine().trim();
+        String firstName = capitalizeFirstLetter(scanner.nextLine().trim());
 
         System.out.print("Enter you Middle name: ");
-        String middleName = scanner.nextLine().trim();
+        String middleName = capitalizeFirstLetter(scanner.nextLine().trim());
 
         System.out.print("Enter your Last name: ");
-        String lastName = scanner.nextLine().trim();
+        String lastName = capitalizeFirstLetter(scanner.nextLine().trim());
 
         System.out.print("Enter your suffix: ");
-        String suffix = scanner.nextLine().trim();
+        String suffix = capitalizeFirstLetter(scanner.nextLine().trim());
 
         //full name logic
         String fullName = firstName;
@@ -39,5 +39,9 @@ public class FullNameApplication {
 
         //capitalize first letter
 
+    }
+    //capitalize first letter
+    public static String capitalizeFirstLetter(String name){
+        return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
     }
 }
