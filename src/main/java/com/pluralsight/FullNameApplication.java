@@ -7,16 +7,16 @@ public class FullNameApplication {
         Scanner scanner = new Scanner(System.in);
 
         //gather user info
-        System.out.println("Enter your name: ");
+        System.out.print("Enter your name: ");
         String firstName = scanner.nextLine().trim();
 
-        System.out.println("Enter you Middle name: ");
+        System.out.print("Enter you Middle name: ");
         String middleName = scanner.nextLine().trim();
 
-        System.out.println("Enter your Last name: ");
+        System.out.print("Enter your Last name: ");
         String lastName = scanner.nextLine().trim();
 
-        System.out.println("Enter your suffix: ");
+        System.out.print("Enter your suffix: ");
         String suffix = scanner.nextLine().trim();
 
         //full name logic
@@ -29,11 +29,15 @@ public class FullNameApplication {
         fullName += " " + lastName;
 
         if (!suffix.isBlank()){
-            fullName += " " + suffix;
+            fullName += " ," + suffix;
 
         }
 
-        System.out.println("Full name: " + fullName);
+        System.out.println("\nFull name: " + fullName);
+
+
+
+        //capitalize first letter
 
     }
 }
