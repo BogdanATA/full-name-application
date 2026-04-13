@@ -42,6 +42,8 @@ public class FullNameApplication {
     }
     //capitalize first letter
     public static String capitalizeFirstLetter(String name){
+        if (name.isBlank()) return name;
+
         return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
     }
 }
