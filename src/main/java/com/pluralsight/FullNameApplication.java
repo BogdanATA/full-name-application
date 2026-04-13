@@ -19,6 +19,21 @@ public class FullNameApplication {
         System.out.println("Enter your suffix: ");
         String suffix = scanner.nextLine().trim();
 
+        //full name logic
+        String fullName = firstName;
+
+        if (!middleName.isBlank()){
+            fullName += " " + middleName;
+
+        }
+        fullName += " " + lastName;
+
+        if (!suffix.isBlank()){
+            fullName += " " + suffix;
+
+        }
+
+        System.out.println("Full name: " + fullName);
 
     }
 }
